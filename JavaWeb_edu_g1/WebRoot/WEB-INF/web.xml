@@ -12,6 +12,11 @@
     <servlet-name>VerifyCodeServlet</servlet-name>
     <servlet-class>cn.zjxu.exam.user.web.servlet.VerifyCodeServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>PaperServlet</servlet-name>
+    <servlet-class>cn.zjxu.exam.paper.web.servlet.PaperServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>UserServlet</servlet-name>
     <url-pattern>/UserServlet</url-pattern>
@@ -23,5 +28,9 @@
   <servlet-mapping>
     <servlet-name>VerifyCodeServlet</servlet-name>
     <url-pattern>/VerifyCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PaperServlet</servlet-name>
+    <url-pattern>/PaperServlet</url-pattern>
   </servlet-mapping>
 </web-app>
