@@ -41,9 +41,8 @@ function load() {
 	<c:url value='/adminjsps/admin/category/list.jsp'/>：指定菜单项时要请求的地址
 	body：结果的显示框架页名称
 	*/
-	bar1.add("试卷管理", "查看试卷", "<c:url value='/admin/AdminCategoryServlet?method=findAll'/>", "body");
-	bar1.add("试卷管理", "添加试卷", "<c:url value='/adminjsps/admin/paper/add.jsp'/>", "body");
-	bar1.add("试卷管理", "删除试卷", "<c:url value='/adminjsps/admin/paper/delete.jsp'/>", "body");
+	bar1.add("试题管理", "查看试题", "<c:url value='/admin/AdminCategoryServlet?method=findAll'/>", "body");
+	bar1.add("试题管理", "添加试题", "<c:url value='/adminjsps/admin/paper/add.jsp'/>", "body");
 
 	bar1.add("学生管理", "查看所有", "<c:url value='/AdminUserServlet?method=findAll&mark=2'/>", "body");
 	bar1.add("学生管理", "添加学生", "<c:url value='/adminjsps/admin/user/add.jsp?mark=2'/>", "body");
