@@ -14,6 +14,18 @@ public class PaperService {
 		List list = paperDao.findAll();
 		return list;
 	}
+	/*
+	 * 加载
+	 */
+	public Paper findByPid(String pid) {
+		return paperDao.findByPid(pid);
+	}
+	/*
+	 * 编辑
+	 */
+	public void edit(Paper p) {
+		paperDao.edit(p);
+	}
 	
 	
 	

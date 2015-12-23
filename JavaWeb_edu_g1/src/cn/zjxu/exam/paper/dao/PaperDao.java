@@ -26,7 +26,34 @@ public class PaperDao {
 			throw new RuntimeException(e);
 		}
 	}
-
+	
+	/*
+	 * 通过试题pid查询
+	 */
+	public Paper findByPid(String pid) {
+		try {
+			String sql = "select * from paper where pid=?";
+			return qr.query(sql, new BeanHandler<Paper>(Paper.class), pid);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	/*
+	 * 编辑试题
+	 */
+	public void edit(Paper p) {
+		try {
+			String sql = "update paper set `type`=?,`q_subject`=?,q_answer=?,optionA=?,optionB=?,optionC=?,optionD=?,note=? where pid=?";
+			Object[] params = { p.getType(), p.getQ_subject(), p.getQ_answer(),
+					p.getOptionA(), p.getOptionB(), p.getOptionC(),
+					p.getOptionD(), p.getNote(), p.getPid() };
+			qr.update(sql, params);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 	/**
 	 * 按照试卷类型查询
 	 * 
@@ -43,38 +70,9 @@ public class PaperDao {
 		}
 	}
 
-	/**
-	 * 通过试题pid查询
-	 * 
-	 * @param pid
-	 *            试题PID
-	 * @return 试题
-	 */
-	public Paper findByPid(String pid) {
-		try {
-			String sql = "select * from paper where pid=?";
-			return qr.query(sql, new BeanHandler<Paper>(Paper.class), pid);
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
+	
 
-	/**
-	 * 编辑试题
-	 * 
-	 * @param p
-	 */
-	public void edit(Paper p) {
-		try {
-			String sql = "update paper set `type`=?,`q_subject`=?,q_answer=?,optionA=?,optionB=?,optionC=?,optionD=?,note=? where pid=?";
-			Object[] params = { p.getType(), p.getQ_subject(), p.getQ_answer(),
-					p.getOptionA(), p.getOptionB(), p.getOptionC(),
-					p.getOptionD(), p.getNote(), p.getPid() };
-			qr.update(sql, params);
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-	}
+
 
 	/**
 	 * 删除试题
@@ -158,5 +156,7 @@ public class PaperDao {
 			throw new RuntimeException(e);
 		}
 	}
+
+	
 
 }
