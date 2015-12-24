@@ -22,9 +22,9 @@
   <body>
   <form id="form" action="<c:url value=''/>" method="post">
   <ul>
-    <li>题目</li>
-    <li>题目</li>
-    <li>题目</li>
+    <li>单选题</li><a href="duanxuan.jsp" onclick="单选题";></a>
+    <li>多选题</li>
+    <li>判断题</li>
   </ul>
   </form>
   <a href="javascript:document.getElementById('form').submit();">提交</a>
