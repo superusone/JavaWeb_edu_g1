@@ -15,18 +15,24 @@ public class PaperService {
 		return list;
 	}
 	/*
-	 * 加载
+	 * 通过pid查询试题
 	 */
 	public Paper findByPid(String pid) {
 		return paperDao.findByPid(pid);
 	}
 	/*
-	 * 编辑
+	 * 编辑试题
 	 */
 	public void edit(Paper p) {
 		paperDao.edit(p);
 	}
-	
+	/*
+	 * 通过note查询试题
+	 */
+	public List<Paper> findByNote(String note) {
+		List list = paperDao.findByNote(note);
+		return list;
+	}
 	
 	
 	
