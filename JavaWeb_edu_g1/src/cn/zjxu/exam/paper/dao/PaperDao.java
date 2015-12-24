@@ -61,9 +61,9 @@ public class PaperDao {
 	 *            A或B卷...
 	 * @return 试题集
 	 */
-	public List<Paper> findByNote(String note) {
+	public List<Paper> findByNoteA() {
 		try {
-			String sql = "select * from paper where note=" + note;
+			String sql = "select q_subject,optionA,optionB,optionc,optiond from paper where note='A'";
 			return qr.query(sql, new BeanListHandler<Paper>(Paper.class));
 		} catch (SQLException e) {
 			throw new RuntimeException(e);

@@ -19,17 +19,15 @@
 
   </head>
   <body>
-  <form id="form" action="<c:url value=''/>" method="post">
-  <ul>
-     <h3 align="center">列表</h3>
+<!--  未处理分页  -->
+   <h3 align="center">列表</h3>
 <table border="1" width="70%" align="center">
     <tr>
         <th>题目</th>
         <th>A</th>
         <th>B</th>
         <th>C</th>
-        <th>D</th> 
-        <th>备注</th>   
+        <th>D</th>    
     </tr>
 <%--
 要遍历提UserList这个集合
@@ -41,7 +39,6 @@
         <td>${paper.optionB }</td>
         <td>${paper.optionC }</td>
         <td>${paper.optionD }</td>
-        <td>${paper.note }</td>
         <td>
             <a href="<c:url value='/AdminUserServlet?method=preEdit&note=A }'/>"></a>
             
@@ -51,8 +48,7 @@
 </table>
 <br/>
     
-  </ul>
-  </form>
+
   <a href="javascript:document.getElementById('form').submit();">提交</a>
   </body>
 </html>

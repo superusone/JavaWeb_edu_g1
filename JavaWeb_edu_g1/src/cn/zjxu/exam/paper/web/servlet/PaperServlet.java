@@ -61,7 +61,7 @@ public class PaperServlet extends BaseServlet {
 		return "f:/msg.jsp";
 	}
 	
-	public String findByNote(HttpServletRequest request, HttpServletResponse response)
+	public String findByNoteA(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     	/*
     	 * 获取note
@@ -69,10 +69,9 @@ public class PaperServlet extends BaseServlet {
     	 * 把paper保存到request域中
     	 * 转发到edit.jsp显示在表单中
     	 */
-        String note = request.getParameter("note");
-        System.out.println(note);
-        List<Paper> paper = paperService.findByNote(note);
-        request.setAttribute("paper", paper);
+        //String note = request.getParameter("note");
+        List<Paper> paper = paperService.findByNoteA();
+        request.setAttribute("PaperList", paper);
         return "f:/jsps/paper/desc.jsp";
     }
 	

@@ -29,8 +29,8 @@ public class PaperService {
 	/*
 	 * 通过note查询试题
 	 */
-	public List<Paper> findByNote(String note) {
-		List list = paperDao.findByNote(note);
+	public List<Paper> findByNoteA() {
+		List list = paperDao.findByNoteA();
 		return list;
 	}
 	
