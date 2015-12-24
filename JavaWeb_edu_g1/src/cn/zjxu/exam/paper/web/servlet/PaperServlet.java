@@ -36,11 +36,10 @@ public class PaperServlet extends BaseServlet {
     	 * 编辑之前的加载工作
     	 * 获取pid
     	 * 使用pid来调用service的load方法。得到paper对象
-    	 * 吧paper保存到request域中
+    	 * 把paper保存到request域中
     	 * 转发到edit.jsp显示在表单中
     	 */
         String pid = request.getParameter("pid");
-        System.out.println(pid);
         Paper paper = paperService.findByPid(pid);
         request.setAttribute("paper", paper);
         return "f:/adminjsps/admin/paper/edit.jsp";
@@ -64,16 +63,21 @@ public class PaperServlet extends BaseServlet {
 	public String findByNoteA(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     	/*
-    	 * 获取note
     	 * 使用note来调用service的findByNot方法。得到paper对象
     	 * 把paper保存到request域中
     	 * 转发到edit.jsp显示在表单中
     	 */
-        //String note = request.getParameter("note");
         List<Paper> paper = paperService.findByNoteA();
         request.setAttribute("PaperList", paper);
         return "f:/jsps/paper/desc.jsp";
     }
+	public String findByNoteB(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        List<Paper> paper = paperService.findByNoteA();
+        request.setAttribute("PaperList", paper);
+        return "f:/jsps/paper/desc.jsp";
+    }
+	
 	/*
 	 * 添加试题方法
 	 */
@@ -90,5 +94,15 @@ public class PaperServlet extends BaseServlet {
 		paperService.add(paper);
 		 request.setAttribute("msg", "编辑试题成功！");
 			return "f:/adminjsps/admin/msg.jsp";
+	}
+	/*
+	 * 删除试题方法
+	 */
+	public String delete(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String pid = request.getParameter("pid");
+		paperService.delete(pid);
+		request.setAttribute("msg", "试题删除成功！");
+		return "f:/adminjsps/admin/msg.jsp";
 	}
 }

@@ -27,9 +27,16 @@ public class PaperService {
 		paperDao.edit(p);
 	}
 	/*
-	 * 通过note查询试题
+	 * 查询试卷A
 	 */
 	public List<Paper> findByNoteA() {
+		List list = paperDao.findByNoteA();
+		return list;
+	}
+	/*
+	 * 查询试卷B
+	 */
+	public List<Paper> findByNoteB() {
 		List list = paperDao.findByNoteA();
 		return list;
 	}
@@ -39,8 +46,12 @@ public class PaperService {
 	public void add(Paper paper){
 		paperDao.add(paper);
 	}
-	
-	
+	/*
+	 * 删除试题
+	 */
+	public void delete(String pid){
+		paperDao.delete(pid);
+	}
 	
 	
 	
