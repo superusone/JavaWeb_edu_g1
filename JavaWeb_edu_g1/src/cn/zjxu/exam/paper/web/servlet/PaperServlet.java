@@ -1,6 +1,7 @@
 package cn.zjxu.exam.paper.web.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -60,7 +61,20 @@ public class PaperServlet extends BaseServlet {
 		return "f:/msg.jsp";
 	}
 	
-	
+	public String findByNote(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+    	/*
+    	 * 获取note
+    	 * 使用note来调用service的findByNot方法。得到paper对象
+    	 * 把paper保存到request域中
+    	 * 转发到edit.jsp显示在表单中
+    	 */
+        String note = request.getParameter("note");
+        System.out.println(note);
+        List<Paper> paper = paperService.findByNote(note);
+        request.setAttribute("paper", paper);
+        return "f:/jsps/paper/desc.jsp";
+    }
 	
 	
 	
