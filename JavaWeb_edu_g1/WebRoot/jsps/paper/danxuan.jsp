@@ -24,6 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  <form id="form" action="desc.jsp" method="post" >
     <table border="1" width="70%" align="center">
     <tr>
         <th>题目</th>
