@@ -33,8 +33,12 @@ public class PaperService {
 		List list = paperDao.findByNoteA();
 		return list;
 	}
-	
-	
+	/*
+	 * 添加试题
+	 */
+	public void add(Paper paper){
+		paperDao.add(paper);
+	}
 	
 	
 	

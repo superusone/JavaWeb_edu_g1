@@ -57,8 +57,8 @@ public class PaperServlet extends BaseServlet {
 			throws ServletException, IOException {
 		Paper p=CommonUtils.toBean(request.getParameterMap(), Paper.class);
 		paperService.edit(p);
-		request.setAttribute("msg", "恭喜，编辑试题成功！");
-		return "f:/msg.jsp";
+		request.setAttribute("msg", "编辑试题成功！");
+		return "f:/adminjsps/admin/msg.jsp";
 	}
 	
 	public String findByNoteA(HttpServletRequest request, HttpServletResponse response)
@@ -74,12 +74,21 @@ public class PaperServlet extends BaseServlet {
         request.setAttribute("PaperList", paper);
         return "f:/jsps/paper/desc.jsp";
     }
-	
-	
-	
-	
-	
-	
-	
-	
+	/*
+	 * 添加试题方法
+	 */
+	public String add(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		/*封装表单数据到paper对象
+		  * 2补全cid ，使用uuid
+		  * 3使用service方法完成添加工作
+		  * 4向request 中保存成功信息
+		  * 5转发到msg.jsp中
+		  */
+		Paper paper=CommonUtils.toBean(request.getParameterMap(), Paper.class);
+		paper.setPid(CommonUtils.uuid());
+		paperService.add(paper);
+		 request.setAttribute("msg", "编辑试题成功！");
+			return "f:/adminjsps/admin/msg.jsp";
+	}
 }

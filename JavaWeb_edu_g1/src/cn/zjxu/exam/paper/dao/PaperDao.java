@@ -54,12 +54,8 @@ public class PaperDao {
 		}
 	}
 	
-	/**
-	 * 按照试卷类型查询
-	 * 
-	 * @param note
-	 *            A或B卷...
-	 * @return 试题集
+	/*
+	 * 查询试卷A
 	 */
 	public List<Paper> findByNoteA() {
 		try {
@@ -69,10 +65,6 @@ public class PaperDao {
 			throw new RuntimeException(e);
 		}
 	}
-
-	
-
-
 
 	/**
 	 * 删除试题
@@ -108,10 +100,8 @@ public class PaperDao {
 		}
 	}
 
-	/**
-	 * 插入Paper试题
-	 *
-	 * @param paper
+	/*
+	 * 插入试题
 	 */
 	public void add(Paper paper) {
 		try {
