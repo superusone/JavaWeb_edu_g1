@@ -18,7 +18,6 @@
 	-->
 
   </head>
-  
   <body>
   <form id="form" action="<c:url value=''/>" method="post">
   <ul>
