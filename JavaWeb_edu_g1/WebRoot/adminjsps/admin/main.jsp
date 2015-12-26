@@ -43,19 +43,20 @@
   
   <body>
 <table class="table" align="center">
-	<tr style="background: rgb(78,78,78); height: 200px; "><!-- 表格宽 -->
+	<tr style="background: rgb(78,78,78); height: 200px; "><!-- 表格高 -->
 		<td colspan="2" align="center">
 			<iframe frameborder="0" src="<c:url value='/adminjsps/admin/left.jsp'/>" name="left"></iframe>
 		</td>
-	</tr>
-	<tr>
-		<td width="80" style="padding:0px;" align="center" valign="top">
+	    <td width="968" style="padding:0px;" align="center" valign="top">
 			<iframe frameborder="0" width="120" src="<c:url value='/adminjsps/admin/top.jsp'/>" name="top"></iframe>
 		</td>
-		<td>
+	</tr>
+	<tr>
+		<td colspan="5" align="center">
 			<iframe frameborder="0" src="<c:url value='/adminjsps/admin/body.jsp'/>" name="body"></iframe>
 		</td>
 	</tr>
 </table>
+
   </body>
 </html>

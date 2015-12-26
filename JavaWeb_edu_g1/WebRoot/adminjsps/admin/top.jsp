@@ -18,7 +18,17 @@
   </head>
   
   <body style="background: rgb(159,153,138);color: rgb(76,48,0);">
-<h1 style="text-align: center; ">考务后台管理</h1>
-<!--  <p style="font-size: 11pt;">管理员：张三</p>-->
+  
+<h1 style="text-align: center ; 
+	color:rgb(76,48,255);
+	margin-top:50px;
+	font-size:50px">
+	
+	
+	嘉兴学院考试考务后台管理系统</h1>
+	
+ <p style="font-size: 11pt ;
+	text-align: right;">
+	管理员：张三</p>
   </body>
 </html>
