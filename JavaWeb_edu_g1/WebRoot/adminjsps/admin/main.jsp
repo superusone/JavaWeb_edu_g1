@@ -43,14 +43,14 @@
   
   <body>
 <table class="table" align="center">
-	<tr style="background: rgb(78,78,78); height: 120px; ">
+	<tr style="background: rgb(78,78,78); height: 200px; "><!-- 表格宽 -->
 		<td colspan="2" align="center">
-			<iframe frameborder="0" src="<c:url value='/adminjsps/admin/top.jsp'/>" name="top"></iframe>
+			<iframe frameborder="0" src="<c:url value='/adminjsps/admin/left.jsp'/>" name="left"></iframe>
 		</td>
 	</tr>
 	<tr>
-		<td width="265" style="padding:5px;" align="center" valign="top">
-			<iframe frameborder="0" width="120" src="<c:url value='/adminjsps/admin/left.jsp'/>" name="left"></iframe>
+		<td width="80" style="padding:0px;" align="center" valign="top">
+			<iframe frameborder="0" width="120" src="<c:url value='/adminjsps/admin/top.jsp'/>" name="top"></iframe>
 		</td>
 		<td>
 			<iframe frameborder="0" src="<c:url value='/adminjsps/admin/body.jsp'/>" name="body"></iframe>
