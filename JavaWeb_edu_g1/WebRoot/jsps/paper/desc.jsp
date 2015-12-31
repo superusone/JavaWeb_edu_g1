@@ -19,7 +19,7 @@
 
   </head>
   <body>
-  <form id="form" action="<c:url value='/SearchPaperServlet?method='/>" method="post">
+  <form id="form" action="<c:url value='/SearchPaperServlet?method=JudgeAnswer'/>" method="post">
   <ul>
      <h3 align="center">列表</h3>
 <table border="1" width="70%" align="center">
@@ -41,7 +41,7 @@
         <td>${paper.optionC }</td>
         <td>${paper.optionD }</td>
         <td>
-            <a href="<c:url value='/AdminUserServlet?method=preEdit&note=A }'/>"></a>
+            <a href="<c:url value='/AdminUserServlet?method=preEdit&note=A'/>"></a>
             
         </td>
     </tr>

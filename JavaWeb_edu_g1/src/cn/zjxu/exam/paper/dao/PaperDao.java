@@ -155,6 +155,21 @@ public class PaperDao {
 		}
 	}
 
-	
+	/**
+	 * 试题answer
+	 * @param pid 
+	 * @return Answer
+	 */
+	public String getAnswer(String pid) {
+		try {
+			String sql = "select * from paper where pid=?";
+			Paper paper = qr.query(sql, new BeanHandler<Paper>(Paper.class),
+					pid);
+			return paper.getQ_answer();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 
 }
