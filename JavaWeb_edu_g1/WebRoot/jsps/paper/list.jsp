@@ -35,23 +35,14 @@
   <div class="icon">
     <a href="<c:url value='/jsps/paper/desc.jsp'/>"><img src="<c:url value='/book_img/8758723-1_l.jpg'/>" border="0"/></a>
       <br/>
-   	<a href="<c:url value='/jsps/paper/desc.jsp'/>">Java</a>
+   	<a href="<c:url value='/jsps/paper/desc.jsp'/>">A</a>
   </div>
   <div class="icon">
     <a href="<c:url value='/jsps/paper/desc.jsp'/>"><img src="<c:url value='/book_img/8991366-1_l.jpg'/>" border="0"/></a>
       <br/>
-   	<a href="<c:url value='/jsps/paper/desc.jsp'/>">JavaSE</a>
+   	<a href="<c:url value='/jsps/paper/desc.jsp'/>">B</a>
   </div>
-   <div class="icon">
-    <a href="<c:url value='/jsps/paper/desc.jsp'/>"><img src="<c:url value='/book_img/9265169-1_l.jpg'/>" border="0"/></a>
-      <br/>
-   	<a href="<c:url value='/jsps/paper/desc.jsp'/>">JavaEE</a>
-  </div>
-   <div class="icon">
-    <a href="<c:url value='/jsps/paper/desc.jsp'/>"><img src="<c:url value='/book_img/9317290-1_l.jpg'/>" border="0"/></a>
-      <br/>
-   	<a href="<c:url value='/jsps/paper/desc.jsp'/>">JavaME</a>
-  </div>
+
 
 
   

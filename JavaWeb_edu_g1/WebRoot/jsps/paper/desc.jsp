@@ -19,7 +19,7 @@
 
   </head>
   <body>
-  <form id="form" action="<c:url value=''/>" method="post">
+  <form id="form" action="<c:url value='/SearchPaperServlet?method='/>" method="post">
   <ul>
      <h3 align="center">列表</h3>
 <table border="1" width="70%" align="center">

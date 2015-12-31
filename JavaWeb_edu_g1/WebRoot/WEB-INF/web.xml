@@ -16,6 +16,11 @@
     <servlet-name>PaperServlet</servlet-name>
     <servlet-class>cn.zjxu.exam.paper.web.servlet.PaperServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>SearchPaperServlet</servlet-name>
+    <servlet-class>cn.zjxu.exam.paper.web.servlet.SearchPaperServlet</servlet-class>
+  </servlet>
+
 
   <servlet-mapping>
     <servlet-name>UserServlet</servlet-name>
@@ -32,5 +37,9 @@
   <servlet-mapping>
     <servlet-name>PaperServlet</servlet-name>
     <url-pattern>/PaperServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchPaperServlet</servlet-name>
+    <url-pattern>/SearchPaperServlet</url-pattern>
   </servlet-mapping>
 </web-app>
