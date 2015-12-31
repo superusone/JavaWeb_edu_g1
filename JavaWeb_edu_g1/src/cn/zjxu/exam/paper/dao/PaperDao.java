@@ -54,25 +54,28 @@ public class PaperDao {
 		}
 	}
 	
-	/**
-	 * 按照试卷类型查询
-	 * 
-	 * @param note
-	 *            A或B卷...
-	 * @return 试题集
+	/*
+	 * 查询试卷A
 	 */
-	public List<Paper> findByNote(String note) {
+	public List<Paper> findByNoteA() {
 		try {
-			String sql = "select * from paper where note=" + note;
+			String sql = "select q_subject,optionA,optionB,optionc,optiond from paper where note='A'";
 			return qr.query(sql, new BeanListHandler<Paper>(Paper.class));
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
-
-	
-
-
+	/*
+	 * 查询试卷B
+	 */
+	public List<Paper> findByNoteB() {
+		try {
+			String sql = "select q_subject,optionA,optionB,optionc,optiond from paper where note='A'";
+			return qr.query(sql, new BeanListHandler<Paper>(Paper.class));
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 
 	/**
 	 * 删除试题
@@ -80,7 +83,7 @@ public class PaperDao {
 	 * @param p
 	 */
 	public void delete(Paper p) {
-		// 伪删除吧记录抹掉
+		// 伪删除把记录抹掉
 
 		try {
 			String sql = "DELETE FROM `edu`.`paper` WHERE `pid`=?";
@@ -91,14 +94,11 @@ public class PaperDao {
 		}
 	}
 
-	/**
+	/*
 	 * 删除试题
-	 *
-	 * @param pid
 	 */
 	public void delete(String pid) {
-		// 伪删除吧记录抹掉
-
+		// 通过试题pid删除试题
 		try {
 			String sql = "DELETE FROM `edu`.`paper` WHERE `pid`=?";
 			Object[] params = { pid };
@@ -108,10 +108,8 @@ public class PaperDao {
 		}
 	}
 
-	/**
-	 * 插入Paper试题
-	 *
-	 * @param paper
+	/*
+	 * 插入试题
 	 */
 	public void add(Paper paper) {
 		try {

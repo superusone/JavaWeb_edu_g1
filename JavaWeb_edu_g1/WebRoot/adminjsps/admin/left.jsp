@@ -20,13 +20,13 @@
 /*
  * bar1：必须与对象名相同！
  */
-var bar1 = new Q6MenuBar("bar1", "XXX考试考务");
+var bar1 = new Q6MenuBar("bar1", "考试考务菜单");
 function load() {
 	/*
 	设置本色方案！
 	配置方案一共4种：0、1、2、3
 	*/
-	bar1.colorStyle = 2;
+	bar1.colorStyle = 3;
 	/*
 	指定图片目录
 	*/
@@ -59,7 +59,7 @@ function load() {
 
 </head>
 
-<body onload="load()" style="margin: 0px; background: rgb(254,238,189);">
+<body onload="load()" style="margin: 0px; background: rgb(159,153,138);">
 <div id="menu"></div>
 
 </body>
