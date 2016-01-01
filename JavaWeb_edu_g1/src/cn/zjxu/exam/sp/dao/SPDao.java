@@ -1,6 +1,7 @@
 package cn.zjxu.exam.sp.dao;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
@@ -34,7 +35,7 @@ public class SPDao {
 			String sql = "select *from sp where id=" + id;
 			return qr.query(sql, new BeanListHandler<SP>(SP.class));
 		} catch (SQLException e) {
-			throw new RuntimeException(e);
+			return null;
 		}
 	}
 	

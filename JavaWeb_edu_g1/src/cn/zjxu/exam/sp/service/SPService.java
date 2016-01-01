@@ -21,16 +21,20 @@ public class SPService {
  */
 	public String ShowGrade(String id) {
 		List<SP> spList = spDao.findById(id);
-
 		int sum_A = 0;
 		int sum_B = 0;
-		for (SP sp : spList) {
-			if (paperDao.getNote(sp.getPid()).contains("A")) {
-				sum_A += sp.getGrade();
-			}else{
-				sum_B += sp.getGrade();
-			}
-		} 
+        if(spList!=null){
+    		for (SP sp : spList) {
+    			if (paperDao.getNote(sp.getPid()).contains("A")) {
+    				sum_A += sp.getGrade();
+    			}else{
+    				sum_B += sp.getGrade();
+    			}
+    		} 
+        }else {
+        	return "该用户没有成绩记录";
+        }
+		
 		return sum_A+ "@" + sum_B;
 	}
 

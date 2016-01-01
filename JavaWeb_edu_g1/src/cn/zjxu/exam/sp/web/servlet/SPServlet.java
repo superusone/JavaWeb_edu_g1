@@ -17,9 +17,15 @@ public class SPServlet extends BaseServlet {
 		String id = request.getParameter("id");
 		System.out.println("-----" + id);
 		if (id != null) {
-			String[] grade = sps.ShowGrade(id).split("@");
-			request.setAttribute("A", grade[0]);
-			request.setAttribute("B", grade[1]);
+			String s = sps.ShowGrade(id);
+			if(! s.equals("该用户没有成绩记录")){
+				
+				String[] grade = s.split("@");
+				request.setAttribute("A", grade[0]);
+				request.setAttribute("B", grade[1]);
+			}else{
+				request.setAttribute("msg", "该用户没有成绩记录");
+			}
 		}
 		return findAll(request, response);
 	}
