@@ -24,7 +24,10 @@
     <servlet-name>SPServlet</servlet-name>
     <servlet-class>cn.zjxu.exam.sp.web.servlet.SPServlet</servlet-class>
   </servlet>
-
+  <servlet>
+    <servlet-name>ShowPaperServlet</servlet-name>
+    <servlet-class>cn.zjxu.exam.paper.web.servlet.ShowPaperServlet</servlet-class>
+  </servlet>
 
 
   <servlet-mapping>
@@ -50,5 +53,9 @@
   <servlet-mapping>
     <servlet-name>SPServlet</servlet-name>
     <url-pattern>/SPServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ShowPaperServlet</servlet-name>
+    <url-pattern>/ShowPaperServlet</url-pattern>
   </servlet-mapping>
 </web-app>
