@@ -26,23 +26,45 @@ public class JudgeAnswerService extends PaperServlet {
 	 *            用户答案
 	 */
 	public void Judge(String id, String pid, String userAnswer) {
-
 		String answer = paperDao.getAnswer(pid);
 		int grade;
 		SP sp = new SP();
-		if (userAnswer.equals(answer)) {
-			grade = 10;
-			sp.setGrade(grade);
-			sp.setId(id);
-			sp.setPid(pid);
-			spDao.add(sp);
+		if (spDao.findByPid(pid) == null) {//判断该道题是否有成绩
+			if (userAnswer.equals(answer)) {
+				grade = 10;
+				sp.setGrade(grade);
+				sp.setId(id);
+				sp.setPid(pid);
+				System.out.println("JudgeAnswer::" + sp.toString());
+				spDao.add(sp);
 
-		} else {
-			grade = 0;
-			sp.setGrade(grade);
-			sp.setId(id);
-			sp.setPid(pid);
-			spDao.add(sp);
+			} else {
+				grade = 0;
+				sp.setGrade(grade);
+				sp.setId(id);
+				sp.setPid(pid);
+				System.out.println("JudgeAnswer::" + sp.toString());
+				spDao.add(sp);
+			}
+		}else{
+			//若有成绩，则删除sp表内原有的成绩记录
+			spDao.delete(pid);
+			if (userAnswer.equals(answer)) {
+				grade = 10;
+				sp.setGrade(grade);
+				sp.setId(id);
+				sp.setPid(pid);
+				System.out.println("JudgeAnswer::" + sp.toString());
+				spDao.add(sp);
+
+			} else {
+				grade = 0;
+				sp.setGrade(grade);
+				sp.setId(id);
+				sp.setPid(pid);
+				System.out.println("JudgeAnswer::" + sp.toString());
+				spDao.add(sp);
+			}
 		}
 	}
 

@@ -38,5 +38,30 @@ public class SPDao {
 			return null;
 		}
 	}
-	
+	/*
+	 * 通过pid查询成绩
+	 */
+	public List<SP> findByPid(String pid){
+		try {
+			String sql = "select *from sp where pid="+"'"+pid+"'";
+			System.out.println(sql);
+			return qr.query(sql, new BeanListHandler<SP>(SP.class));
+		} catch (SQLException e) {
+			return null;
+		}
+	}
+	/*
+	 * 根据pid删除成绩
+	 */
+	public void delete(String pid){
+		try {
+			String sql = "DELETE FROM `edu`.`sp` WHERE `pid`=?";
+			Object[] params = { pid };
+			qr.update(sql, params);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 }
+
+
