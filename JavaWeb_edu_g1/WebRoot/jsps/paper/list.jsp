@@ -33,14 +33,14 @@
   <body>
 
   <div class="icon">
-    <a href="<c:url value='/jsps/paper/desc.jsp'/>"><img src="<c:url value='/book_img/8758723-1_l.jpg'/>" border="0"/></a>
+    <a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=A'/>"><img src="<c:url value='/book_img/8758723-1_l.jpg'/>" border="0"/></a>
       <br/>
-   	<a href="<c:url value='/ShowPaperServlet?papertype=A'/>">A</a>
+   	<a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=A'/>">A</a>
   </div>
   <div class="icon">
-    <a href="<c:url value='/jsps/paper/desc.jsp'/>"><img src="<c:url value='/book_img/8991366-1_l.jpg'/>" border="0"/></a>
+    <a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=B'/>"><img src="<c:url value='/book_img/8991366-1_l.jpg'/>" border="0"/></a>
       <br/>
-   	<a href="<c:url value='/ShowPaperServlet?papertype=B'/>">B</a>
+   	<a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=B'/>">B</a>
   </div>
 
 
