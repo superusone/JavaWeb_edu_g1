@@ -1,5 +1,6 @@
 package cn.zjxu.exam.sp.service;
 
+
 import java.util.List;
 
 import cn.zjxu.exam.paper.dao.PaperDao;
@@ -21,6 +22,7 @@ public class SPService {
  */
 	public String ShowGrade(String id) {
 		List<SP> spList = spDao.findById(id);
+		System.out.println("ShowGrade::"+spList);
 		int sum_A = 0;
 		int sum_B = 0;
         if(spList!=null){
@@ -34,7 +36,7 @@ public class SPService {
         }else {
         	return "该用户没有成绩记录";
         }
-		
+		System.out.println("成绩：："+sum_A+ "@" + sum_B);
 		return sum_A+ "@" + sum_B;
 	}
 

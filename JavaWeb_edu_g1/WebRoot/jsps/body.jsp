@@ -18,12 +18,14 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
   </head>
   
   <body>
-    <h1>欢迎，欢迎！热烈欢迎！</h1>
+ 
     
-    ${msg }
+   ${msg }
+    <c:if test="${A!=0 }"><c:out value="${a }"></c:out><c:out value="${A }"></c:out></c:if><br/>
+    <c:if test="${B!=0 }"><c:out value="${b }"></c:out><c:out value="${B }"></c:out></c:if>
+   
   </body>
 </html>

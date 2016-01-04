@@ -32,7 +32,8 @@ public class SPDao {
 	 */
 	public List<SP> findById(String id) {
 		try {
-			String sql = "select *from sp where id=" + id;
+			String sql = "select *from sp where id=" +"'"+ id +"'";
+			System.out.println(sql);
 			return qr.query(sql, new BeanListHandler<SP>(SP.class));
 		} catch (SQLException e) {
 			return null;
@@ -63,5 +64,3 @@ public class SPDao {
 		}
 	}
 }
-
-
