@@ -43,7 +43,7 @@
 </select>	
 </div> 
 
-<div>
+<!--  <div>
 	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaSE分类</a>
 </div>
 <div>
@@ -52,7 +52,7 @@
 <div>
 	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaME分类</a>
 </div>
-
+-->
 
   </body>
 </html>
