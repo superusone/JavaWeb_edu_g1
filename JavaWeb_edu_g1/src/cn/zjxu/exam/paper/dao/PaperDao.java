@@ -26,14 +26,45 @@ public class PaperDao {
 			throw new RuntimeException(e);
 		}
 	}
+	/**
+	 * 按照试卷类型查询
+	 * 
+	 * @param note
+	 *            A或B卷...
+	 * @return 试题集
+	 */
+	public List<Paper> findByNote(String note) {
+		try {
+			String sql = "select * from paper where note=" + "'" + note + "'";
+			return qr.query(sql, new BeanListHandler<Paper>(Paper.class));
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 	
 	/*
 	 * 通过试题pid查询
 	 */
 	public Paper findByPid(String pid) {
 		try {
-			String sql = "select * from paper where note=" + "'" + note + "'";
+			String sql = "select * from paper where pid=?";
 			return qr.query(sql, new BeanHandler<Paper>(Paper.class) );
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	/**
+	 * 通过试题题目查询
+	 * 
+	 * @param q_subject
+	 * 
+	 * @return
+	 */
+	public Paper findByQ_subject(String q_subject) {
+		try {
+			String sql = "select * from paper where q_subject=?";
+			return qr
+					.query(sql, new BeanHandler<Paper>(Paper.class), q_subject);
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
@@ -53,7 +84,7 @@ public class PaperDao {
 			throw new RuntimeException(e);
 		}
 	}
-	
+		
 	/*
 	 * 查询试卷A
 	 */
