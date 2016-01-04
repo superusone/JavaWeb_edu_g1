@@ -35,11 +35,11 @@
   <body>
 <div>
 <form name="分类"> 
-<select name="分类" size=1> 
+<select name="分类" value="分类" size=1> 
 <option selected></option> 
-<option value="/jsps/paper/list.jsp">JavaSE分类</option> 
-<option value="/jsps/paper/list.jsp">JavaEE分类</option> 
-<option value="/jsps/paper/list.jsp">JavaME分类</option> 
+<option a href="<c:url value='/jsps/paper/list.jsp'/>">JavaSE分类</option> 
+<option a href="<c:url value='/jsps/paper/list.jsp'/>">JavaEE分类</option> 
+<option a href="<c:url value='/jsps/paper/list.jsp'/>">JavaME分类</option> 
 </select>	
 </div> 
 
