@@ -33,12 +33,12 @@
   <body>
 
   <div class="icon">
-    <a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=A'/>"><img src="<c:url value='/book_img/8758723-1_l.jpg'/>" border="0"/></a>
+    <a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=A'/>"><img src="<c:url value='/book_img/A.jpg'/>" border="0"/></a>
       <br/>
    	<a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=A'/>">A</a>
   </div>
   <div class="icon">
-    <a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=B'/>"><img src="<c:url value='/book_img/8991366-1_l.jpg'/>" border="0"/></a>
+    <a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=B'/>"><img src="<c:url value='/book_img/B.jpg'/>" border="0"/></a>
       <br/>
    	<a href="<c:url value='/ShowPaperServlet?method=ShowPaper&papertype=B'/>">B</a>
   </div>

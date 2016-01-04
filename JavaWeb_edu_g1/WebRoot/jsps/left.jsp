@@ -34,11 +34,16 @@
   
   <body>
 <div>
-	<a href="<c:url value='/jsps/paper/list.jsp'/>">分类</a>
-</div>
+<form name="分类"> 
+<select name="分类" size=1> 
+<option selected></option> 
+<option value="/jsps/paper/list.jsp">JavaSE分类</option> 
+<option value="/jsps/paper/list.jsp">JavaEE分类</option> 
+<option value="/jsps/paper/list.jsp">JavaME分类</option> 
+</select>	
+</div> 
 
-
-<div>
+<!--- <div>
 	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaSE分类</a>
 </div>
 <div>
@@ -47,8 +52,7 @@
 <div>
 	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaME分类</a>
 </div>
-
-
+--->
 
   </body>
 </html>
