@@ -4,55 +4,55 @@ import java.util.List;
 
 import cn.zjxu.exam.paper.dao.PaperDao;
 import cn.zjxu.exam.paper.domain.Paper;
-import cn.zjxu.exam.user.domain.User;
 
 public class PaperService {
 	private PaperDao paperDao = new PaperDao();
-	
-	/**
-	 * 试题集
-	 * @return
+	/*
+	 * 查找所有试题,依赖paperdao
 	 */
 	public List<Paper> findAll(){
 		List list = paperDao.findAll();
 		return list;
-		
 	}
-	
-	/**
-	 * pid查询试题
-	 * @param pid
-	 * @return
+	/*
+	 * 通过pid查询试题
 	 */
-	public Paper findByPid(String pid){
-		Paper paper = paperDao.findByPid(pid);
-		return paper;
+	public Paper findByPid(String pid) {
+		return paperDao.findByPid(pid);
 	}
-	
-	public void add(Paper paper) throws PaperException{
-		if(paperDao.findByQ_subject(paper.getQ_subject()) != null){
-			throw new PaperException("题目重复！");
-		}
-		
+	/*
+	 * 编辑试题
+	 */
+	public void edit(Paper p) {
+		paperDao.edit(p);
+	}
+	/*
+	 * 查询试卷A
+	 */
+	public List<Paper> findByNoteA() {
+		List list = paperDao.findByNoteA();
+		return list;
+	}
+	/*
+	 * 查询试卷B
+	 */
+	public List<Paper> findByNoteB() {
+		List list = paperDao.findByNoteB();
+		return list;
+	}
+	/*
+	 * 添加试题
+	 */
+	public void add(Paper paper){
 		paperDao.add(paper);
 	}
-	/**
-	 * 编辑
-	 * @param paper
-	 * @return
+	/*
+	 * 删除试题
 	 */
-	public String Edit(Paper paper){
-		paperDao.edit(paper);
-		return "OK";
+	public void delete(String pid){
+		paperDao.delete(pid);
 	}
 	
-	/**
-	 * 删除试题
-	 * @param pid
-	 * @return
-	 */
-	public String delete(String pid){
-		paperDao.delete(pid);
-		return "OK!";
-	}
+	
+	
 }
