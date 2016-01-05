@@ -32,7 +32,8 @@
 </style>
   </head>
   
-  <body background="../top_img/123.jpg">
+  <body background="../top_img/12.jpg">
+
 
 
 <h1 style="text-align: center;font-family:'楷体';font-weight:bold;">数信学院考试系统</h1>
