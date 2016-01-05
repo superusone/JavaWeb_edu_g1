@@ -34,25 +34,18 @@
   
   <body>
 <div>
-<form name="分类"> 
-<select name="分类" value="分类" size=1> 
-<option selected></option> 
-<option a href="<c:url value='/jsps/paper/list.jsp'/>">JavaSE分类</option> 
-<option a href="<c:url value='/jsps/paper/list.jsp'/>">JavaEE分类</option> 
-<option a href="<c:url value='/jsps/paper/list.jsp'/>">JavaME分类</option> 
-</select>	
-</div> 
+	课程名称
+</div>
+<div>
+	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaSE</a>
+</div>
+<div>
+	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaEE</a>
+</div>
+<div>
+	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaME</a>
+</div>
 
-<!--  <div>
-	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaSE分类</a>
-</div>
-<div>
-	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaEE分类</a>
-</div>
-<div>
-	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaME分类</a>
-</div>
--->
 
   </body>
 </html>
