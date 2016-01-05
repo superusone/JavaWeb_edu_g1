@@ -34,7 +34,7 @@
   
   <body>
 <div>
-	课程名称
+	  课程名称
 </div>
 <div>
 	<a href="<c:url value='/jsps/paper/list.jsp'/>">JavaSE</a>
