@@ -48,7 +48,7 @@ public class PaperDao {
 	public Paper findByPid(String pid) {
 		try {
 			String sql = "select * from paper where pid=?";
-			return qr.query(sql, new BeanHandler<Paper>(Paper.class) );
+			return qr.query(sql, new BeanHandler<Paper>(Paper.class),pid );
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
