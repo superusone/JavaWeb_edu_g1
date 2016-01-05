@@ -18,7 +18,9 @@
 	-->
 <style type="text/css">
 	body {
-		background: #4682B4; 
+<!--		background: #4682B4; -->
+		
+		
 	}
 	a {
 		text-transform:none;
@@ -30,24 +32,26 @@
 </style>
   </head>
   
-  <body>
-<h1 style="text-align: center;">XXX考试系统</h1>
+  <body background="../top_img/123.jpg">
+
+
+<h1 style="text-align: center;font-family:'楷体';font-weight:bold;">数信学院考试系统</h1>
 <div style="font-size: 10pt;">
 	<c:choose>
 		<c:when test="${empty sessionScope.session_user }">
-			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">登录</a> |&nbsp; 
-			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">注册</a>		
+			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">登 录</a> |&nbsp; 
+			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">注 册 </a>		
 		</c:when>
 		<c:when test="${2 eq sessionScope.session_user.mark }">
 			您好：${sessionScope.session_user.name }&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/paper/list.jsp'/>" target="body">考试</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/paper/list.jsp'/>" target="body">考 试</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href="<c:url value='/SPServlet?method=ShowGrade&id=${sessionScope.session_user.id }'/>" target="body">查看成绩</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="<c:url value='/UserServlet?method=quit'/>" target="_parent">退出</a>		
+			<a href="<c:url value='/UserServlet?method=quit'/>" target="_parent">退 出</a>		
 		</c:when>
 		<c:when test="${1 eq sessionScope.session_user.mark }">
 			您好：${sessionScope.session_user.name }&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/cart/list.jsp'/>" target="body">批阅</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="<c:url value='/UserServlet?method=quit'/>" target="_parent">退出</a>				
+			<a href="<c:url value='/jsps/cart/list.jsp'/>" target="body">批 阅</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="<c:url value='/UserServlet?method=quit'/>" target="_parent">退 出</a>				
 		</c:when>
 
 	</c:choose>
