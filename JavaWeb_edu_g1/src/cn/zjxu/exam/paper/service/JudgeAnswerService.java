@@ -11,7 +11,7 @@ import cn.zjxu.exam.sp.domain.SP;
  * @author lunatic
  *
  */
-public class JudgeAnswerService extends PaperServlet {
+public class JudgeAnswerService  {
 	private SPDao spDao = new SPDao();
 	private PaperDao paperDao = new PaperDao();
 
